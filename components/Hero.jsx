@@ -1,19 +1,20 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
   return (
     <section
       id="profile"
-      className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-28 h-[45vh] sm:h-[73vh] mb-24 "
+      className="flex flex-col justify-center items-center lg:items-start h-[70vh] bg-white text-black "
     >
-      <div className="text-center lg:text-left flex flex-col gap-3">
-        <p className="font-semibold text-lg text-gray-600">Hello, I'm</p>
-        <h1 className="text-4xl lg:text-5xl font-bold text-black">Deepanshu</h1>
-        <p className="text-2xl lg:text-3xl text-gray-700">
-          Fullstack Developer
+      <div className="text-center lg:text-left flex flex-col gap-6 p-8 lg:p-1">
+        <h1 className="text-4xl lg:text-6xl font-bold">Deepanshu</h1>
+        <p className="text-2xl lg:text-4xl">Web Developer</p>
+        <p className="mt-4 text-lg lg:text-xl max-w-2xl">
+          Tech enthusiast with a passion for problem-solving and innovation.
+          Experienced in software development with proficiency in various
+          programming languages and technologies. Dedicated to continuous
+          learning and eager to contribute to impactful projects.
         </p>
         <div className="flex justify-center lg:justify-start gap-4 mt-6">
           <button
@@ -23,14 +24,18 @@ const Hero = () => {
             Download CV
           </button>
           <button
-            className="btn border border-black px-6 py-2 rounded-full transition hover:bg-black hover:text-white"
+            className="btn border border-black text-black px-6 py-2 rounded-full transition hover:bg-black hover:text-white"
             onClick={() => (window.location.href = "./#contact")}
           >
             Contact Info
           </button>
         </div>
-        <div className="flex justify-center lg:justify-start gap-4 mt-6">
-          <Image
+      </div>
+      {/* Scroll down button */}
+      <div className="flex justify-between  gap-4 mt-6 w-full">
+        <div className="flex gap-8">
+          {" "}
+          <img
             width={32}
             height={32}
             src="/assets/linkedin.png"
@@ -41,7 +46,7 @@ const Hero = () => {
                 "https://www.linkedin.com/in/deepanshu-pali-8664a4209/")
             }
           />
-          <Image
+          <img
             width={32}
             height={32}
             src="/assets/github.png"
@@ -52,15 +57,15 @@ const Hero = () => {
             }
           />
         </div>
-      </div>
-      <div className="hidden justify-center h-[275px] w-[275px] lg:h-[400px] lg:w-[400px] sm:flex">
-        <Image
-          width={400}
-          height={400}
-          src="/assets/dp.jpeg"
-          alt="Profile"
-          className="rounded-full object-cover"
-        />
+        <div className=" self-end">
+          <a
+            href="#experience"
+            className="btn bg-black text-white px-4 py-2 rounded-full transition-all
+                      duration-300 hover:bg-gray-800 "
+          >
+            Scroll down
+          </a>
+        </div>
       </div>
     </section>
   );
