@@ -5,7 +5,7 @@ const Skills = () => {
   return (
     <section
       id="experience"
-      className="pt-16 lg:pt-24 mx-auto max-w-screen-lg h-[70vh]"
+      className="sm:pt-16 lg:pt-24 mx-auto max-w-screen-lg sm:h-[70vh]"
     >
       <p className="font-semibold text-center text-gray-600">Explore My</p>
       <h1 className="text-4xl lg:text-5xl text-center font-bold text-gray-800 mb-8">
@@ -16,7 +16,7 @@ const Skills = () => {
           <h2 className="text-2xl font-medium mb-4 text-center">
             Frontend Development
           </h2>
-          <div className="grid grid-cols-2 gap-10 border-black border-2 rounded-md p-10">
+          <div className="grid grid-cols-2 gap-10 border-black border-2 rounded-md m-5 sm:m-0  p-10">
             {/* Row 1 */}
             <div className="skill-item flex items-center">
               <Image
@@ -106,7 +106,7 @@ const Skills = () => {
           <h2 className="text-2xl font-medium mb-4 text-center">
             Backend Development
           </h2>
-          <div className="grid grid-cols-2 gap-10 border-black border-2 rounded-md p-10">
+          <div className="grid grid-cols-2 gap-10 border-black border-2 rounded-md  m-5 sm:m-0 p-10">
             {/* Row 1 */}
             <div className="skill-item flex items-center">
               <Image

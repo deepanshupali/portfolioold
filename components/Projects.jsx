@@ -34,7 +34,10 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="pt-16 lg:pt-24 mx-auto max-w-screen-lg">
+    <section
+      id="projects"
+      className="pt-16 lg:pt-24 mx-auto max-w-screen-lg px-4 lg:px-0"
+    >
       <p className="font-semibold text-center text-gray-600">Browse My</p>
       <h1 className="text-4xl lg:text-5xl text-center font-bold text-gray-800">
         Recent Projects
@@ -44,21 +47,24 @@ const Projects = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            className={`flex gap-16 items-center ${
-              index % 2 === 0 ? "flex-row-reverse" : ""
+            className={`flex flex-col-reverse lg:flex-row gap-16 items-center ${
+              index % 2 === 0 ? "lg:flex-row-reverse" : ""
             }`}
           >
             {/* left */}
-            <div className="flex flex-col items-start basis-[40%]">
-              <p className="sm:text-[34px] mt-5 mb-10 leading-normal text-xl font-bold text-textb text-start">
+            <div className="flex flex-col items-start basis-full lg:basis-[40%]">
+              <p className="text-2xl sm:text-3xl lg:text-[34px] mt-5 mb-5 lg:mb-10 leading-normal font-bold text-textb text-start">
                 {item.name}
               </p>
-              <p className="text-gry text-xl leading-9 text-start">
+              <p className="text-base sm:text-lg lg:text-xl text-gry leading-6 sm:leading-8 lg:leading-9 text-start">
                 {item.des}
               </p>
               <p className="mt-5">
-                <span className="text-xl font-semibold">Tech Stack</span> :
-                <span className="text-lg font-medium">{` ${item.type}`}</span>
+                <span className="text-lg lg:text-xl font-semibold">
+                  Tech Stack
+                </span>{" "}
+                :
+                <span className="text-base lg:text-lg font-medium">{` ${item.type}`}</span>
               </p>
               <div className="mt-6 space-x-4">
                 <a
@@ -81,9 +87,9 @@ const Projects = () => {
             </div>
 
             {/* right */}
-            <div className="basis-[60%]">
+            <div className="basis-full lg:basis-[60%]">
               <Image
-                className="hover:scale-110 transition-all duration-500"
+                className="w-full h-auto sm:hover:scale-110 transition-all duration-500"
                 src={item.image}
                 alt="image"
                 width={600}

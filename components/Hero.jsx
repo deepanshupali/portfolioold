@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="profile"
-      className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-28 h-[73vh] mb-24 "
+      className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-28 h-[45vh] sm:h-[73vh] mb-24 "
     >
       <div className="text-center lg:text-left flex flex-col gap-3">
         <p className="font-semibold text-lg text-gray-600">Hello, I'm</p>
@@ -53,7 +53,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="flex justify-center h-[275px] w-[275px] lg:h-[400px] lg:w-[400px]">
+      <div className="hidden justify-center h-[275px] w-[275px] lg:h-[400px] lg:w-[400px] sm:flex">
         <Image
           width={400}
           height={400}

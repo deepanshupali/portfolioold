@@ -8,7 +8,7 @@ import React from "react";
 
 function Home() {
   return (
-    <div>
+    <div className="w-full">
       <Navbar />
       <Hero />
       {/* <About /> */}
